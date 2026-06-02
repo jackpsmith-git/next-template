@@ -56,7 +56,7 @@ export default function Settings() {
               duration: 0.15,
             }}
             className="
-              fixed bottom-16 right-4 z-999 w-56
+              fixed bottom-16 right-4 w-56
               overflow-hidden
               border border-primary-border rounded-xl
               bg-primary

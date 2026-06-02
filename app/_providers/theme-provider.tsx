@@ -14,15 +14,15 @@ const ThemeContext = createContext<{
   resolvedTheme: 'light',
 });
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('system');
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem('theme') as Theme | null;
-    if (saved) setTheme(saved);
-    setMounted(true);
+  const saved = localStorage.getItem('theme') as Theme | null;
+  if (saved) setTheme(saved);
+  setMounted(true);
   }, []);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     >
       {children}
     </ThemeContext.Provider>
-  );
+  )
 }
 
 export function useTheme() {

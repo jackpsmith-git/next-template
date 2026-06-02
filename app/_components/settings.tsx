@@ -1,7 +1,7 @@
 'use client';
 
 import packageJson from '@/package.json' with { type: 'json' };
-import { useTheme } from '@/app/providers';
+import { useTheme } from '@/app/_providers/theme-provider';
 import { useState, useRef, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';

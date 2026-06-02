@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #fff;
+  --primary-text: #121212;
+  --primary-border: #12121240;
+
+  --secondary: #121212;
+  --secondary-text: #fff;
+
+  --invert-light: invert(100%);
+  --invert-dark: invert(0%);
+}
+
+.dark {
+  --primary: #121212;
+  --primary-text: #fff;
+  --primary-border: #ffffff40;
+
+  --secondary: #fff;
+  --secondary-text: #121212;
+
+  --invert-light: invert(0%);
+  --invert-dark: invert(100%);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-text: var(--primary-text);
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-text: var(--secondary-text);
+  --color-secondary-border: var(--secondary-border);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@utility transition-cols {
+  @apply transition-colors duration-500 ease-in-out;
+}
